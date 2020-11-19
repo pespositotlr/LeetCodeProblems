@@ -1,0 +1,3 @@
+C:\Users\kewl0\source\repos\ConsoleApp2\ConsoleApp2\obj\Debug\netcoreapp3.1\LeetCodeProblems.AssemblyInfoInputs.cache
+C:\Users\kewl0\source\repos\ConsoleApp2\ConsoleApp2\obj\Debug\netcoreapp3.1\LeetCodeProblems.AssemblyInfo.cs
+C:\Users\kewl0\source\repos\ConsoleApp2\ConsoleApp2\obj\Debug\netcoreapp3.1\LeetCodeProblems.csproj.CoreCompileInputs.cache

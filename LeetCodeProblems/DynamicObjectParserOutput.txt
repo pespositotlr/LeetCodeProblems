@@ -1,0 +1,251 @@
+﻿
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_ConfigurationWithString2_ValueIsAString
+Output (stderr):
+MESSAGE:
+DynamicObjectParser.Tests.InvalidKeyException : Exception of type 'DynamicObjectParser.Tests.InvalidKeyException' was thrown.
+
+STACK TRACE:
+   at DynamicObjectParser.Tests.Parser.Parse(String configuration) in /dotnet-task/src/solution.cs:line 60
+   at DynamicObjectParser.Tests.DynamicObjectParser_tests.Parse_ConfigurationWithString2_ValueIsAString() in /dotnet-task/src/tests.cs:line 233
+WRONG ANSWER
+
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_ConfigurationWithWhitespacesToTrim2_ValueIsTrue
+Output (stderr):
+MESSAGE:
+DynamicObjectParser.Tests.InvalidKeyException : Exception of type 'DynamicObjectParser.Tests.InvalidKeyException' was thrown.
+
+STACK TRACE:
+   at DynamicObjectParser.Tests.Parser.Parse(String configuration) in /dotnet-task/src/solution.cs:line 60
+   at DynamicObjectParser.Tests.DynamicObjectParser_tests.Parse_ConfigurationWithWhitespacesToTrim2_ValueIsTrue() in /dotnet-task/src/tests.cs:line 255
+WRONG ANSWER
+
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_InvalidKey4_InvalidKeyExceptionShouldBeThrown
+OK
+
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_DuplicatedKey1_DuplicatedKeyExceptionShouldBeThrown
+Output (stderr):
+MESSAGE:
+Assert.Throws() Failure
+Expected: typeof(DynamicObjectParser.Tests.DuplicatedKeyException)
+Actual:   typeof(DynamicObjectParser.Tests.InvalidKeyException): Exception of type 'DynamicObjectParser.Tests.InvalidKeyException' was thrown.
+---- DynamicObjectParser.Tests.InvalidKeyException : Exception of type 'DynamicObjectParser.Tests.InvalidKeyException' was thrown.
+
+STACK TRACE:
+   at DynamicObjectParser.Tests.Parser.Parse(String configuration) in /dotnet-task/src/solution.cs:line 60
+   at DynamicObjectParser.Tests.DynamicObjectParser_tests.<Parse_DuplicatedKey1_DuplicatedKeyExceptionShouldBeThrown>b__13_0() in /dotnet-task/src/tests.cs:line 129
+----- Inner Stack Trace -----
+   at DynamicObjectParser.Tests.Parser.Parse(String configuration) in /dotnet-task/src/solution.cs:line 60
+   at DynamicObjectParser.Tests.DynamicObjectParser_tests.<Parse_DuplicatedKey1_DuplicatedKeyExceptionShouldBeThrown>b__13_0() in /dotnet-task/src/tests.cs:line 129
+WRONG ANSWER
+
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_ConfigurationWithString1_ValueIsAString
+Output (stderr):
+MESSAGE:
+DynamicObjectParser.Tests.InvalidKeyException : Exception of type 'DynamicObjectParser.Tests.InvalidKeyException' was thrown.
+
+STACK TRACE:
+   at DynamicObjectParser.Tests.Parser.Parse(String configuration) in /dotnet-task/src/solution.cs:line 60
+   at DynamicObjectParser.Tests.DynamicObjectParser_tests.Parse_ConfigurationWithString1_ValueIsAString() in /dotnet-task/src/tests.cs:line 222
+WRONG ANSWER
+
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_InvalidKey3_InvalidKeyExceptionShouldBeThrown
+OK
+
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_UnknownKeys1_CorrectConfigurationShouldBeThrown
+Output (stderr):
+MESSAGE:
+DynamicObjectParser.Tests.InvalidKeyException : Exception of type 'DynamicObjectParser.Tests.InvalidKeyException' was thrown.
+
+STACK TRACE:
+   at DynamicObjectParser.Tests.Parser.Parse(String configuration) in /dotnet-task/src/solution.cs:line 60
+   at DynamicObjectParser.Tests.DynamicObjectParser_tests.Parse_UnknownKeys1_CorrectConfigurationShouldBeThrown() in /dotnet-task/src/tests.cs:line 112
+WRONG ANSWER
+
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_InvalidKey2_InvalidKeyExceptionShouldBeThrown
+OK
+
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_InvalidKey5_InvalidKeyExceptionShouldBeThrown
+OK
+
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_BigConfiguration1_CorrectResults
+Output (stderr):
+MESSAGE:
+DynamicObjectParser.Tests.InvalidKeyException : Exception of type 'DynamicObjectParser.Tests.InvalidKeyException' was thrown.
+
+STACK TRACE:
+   at DynamicObjectParser.Tests.Parser.Parse(String configuration) in /dotnet-task/src/solution.cs:line 60
+   at DynamicObjectParser.Tests.DynamicObjectParser_tests.Parse_BigConfiguration1_CorrectResults() in /dotnet-task/src/tests.cs:line 277
+WRONG ANSWER
+
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_ConfigurationWithBool_ValueIsTrue
+Output (stderr):
+MESSAGE:
+DynamicObjectParser.Tests.InvalidKeyException : Exception of type 'DynamicObjectParser.Tests.InvalidKeyException' was thrown.
+
+STACK TRACE:
+   at DynamicObjectParser.Tests.Parser.Parse(String configuration) in /dotnet-task/src/solution.cs:line 60
+   at DynamicObjectParser.Tests.DynamicObjectParser_tests.Parse_ConfigurationWithBool_ValueIsTrue() in /dotnet-task/src/tests.cs:line 178
+WRONG ANSWER
+
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_InvalidKey6_InvalidKeyExceptionShouldBeThrown
+OK
+
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_BigConfiguration2_CorrectResults
+Output (stderr):
+MESSAGE:
+DynamicObjectParser.Tests.InvalidKeyException : Exception of type 'DynamicObjectParser.Tests.InvalidKeyException' was thrown.
+
+STACK TRACE:
+   at DynamicObjectParser.Tests.Parser.Parse(String configuration) in /dotnet-task/src/solution.cs:line 60
+   at DynamicObjectParser.Tests.DynamicObjectParser_tests.Parse_BigConfiguration2_CorrectResults() in /dotnet-task/src/tests.cs:line 286
+WRONG ANSWER
+
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_InvalidKey1_InvalidKeyExceptionShouldBeThrown
+OK
+
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_DuplicatedKey2_DuplicatedKeyExceptionShouldBeThrown
+Output (stderr):
+MESSAGE:
+Assert.Throws() Failure
+Expected: typeof(DynamicObjectParser.Tests.DuplicatedKeyException)
+Actual:   typeof(DynamicObjectParser.Tests.InvalidKeyException): Exception of type 'DynamicObjectParser.Tests.InvalidKeyException' was thrown.
+---- DynamicObjectParser.Tests.InvalidKeyException : Exception of type 'DynamicObjectParser.Tests.InvalidKeyException' was thrown.
+
+STACK TRACE:
+   at DynamicObjectParser.Tests.Parser.Parse(String configuration) in /dotnet-task/src/solution.cs:line 60
+   at DynamicObjectParser.Tests.DynamicObjectParser_tests.<Parse_DuplicatedKey2_DuplicatedKeyExceptionShouldBeThrown>b__14_0() in /dotnet-task/src/tests.cs:line 135
+----- Inner Stack Trace -----
+   at DynamicObjectParser.Tests.Parser.Parse(String configuration) in /dotnet-task/src/solution.cs:line 60
+   at DynamicObjectParser.Tests.DynamicObjectParser_tests.<Parse_DuplicatedKey2_DuplicatedKeyExceptionShouldBeThrown>b__14_0() in /dotnet-task/src/tests.cs:line 135
+WRONG ANSWER
+
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_ConfigurationWithWhitespacesToTrim3_ValueIsAString
+Output (stderr):
+MESSAGE:
+DynamicObjectParser.Tests.InvalidKeyException : Exception of type 'DynamicObjectParser.Tests.InvalidKeyException' was thrown.
+
+STACK TRACE:
+   at DynamicObjectParser.Tests.Parser.Parse(String configuration) in /dotnet-task/src/solution.cs:line 60
+   at DynamicObjectParser.Tests.DynamicObjectParser_tests.Parse_ConfigurationWithWhitespacesToTrim3_ValueIsAString() in /dotnet-task/src/tests.cs:line 266
+WRONG ANSWER
+
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_EmptyConfiguration_ArgumentExceptionShouldBeThrown
+Output (stderr):
+MESSAGE:
+Assert.Throws() Failure
+Expected: typeof(System.ArgumentException)
+Actual:   (No exception was thrown)
+
+STACK TRACE:
+   at DynamicObjectParser.Tests.DynamicObjectParser_tests.Parse_EmptyConfiguration_ArgumentExceptionShouldBeThrown() in /dotnet-task/src/tests.cs:line 94
+WRONG ANSWER
+
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_ConfigurationWithWhitespacesToTrim1_ValueIsAnInteger
+Output (stderr):
+MESSAGE:
+DynamicObjectParser.Tests.InvalidKeyException : Exception of type 'DynamicObjectParser.Tests.InvalidKeyException' was thrown.
+
+STACK TRACE:
+   at DynamicObjectParser.Tests.Parser.Parse(String configuration) in /dotnet-task/src/solution.cs:line 60
+   at DynamicObjectParser.Tests.DynamicObjectParser_tests.Parse_ConfigurationWithWhitespacesToTrim1_ValueIsAnInteger() in /dotnet-task/src/tests.cs:line 244
+WRONG ANSWER
+
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_ConfigurationWithNegativeInteger_ValueIsMinus33333
+Output (stderr):
+MESSAGE:
+DynamicObjectParser.Tests.InvalidKeyException : Exception of type 'DynamicObjectParser.Tests.InvalidKeyException' was thrown.
+
+STACK TRACE:
+   at DynamicObjectParser.Tests.Parser.Parse(String configuration) in /dotnet-task/src/solution.cs:line 60
+   at DynamicObjectParser.Tests.DynamicObjectParser_tests.Parse_ConfigurationWithNegativeInteger_ValueIsMinus33333() in /dotnet-task/src/tests.cs:line 211
+WRONG ANSWER
+
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_NullConfiguration_ArgumentExceptionShouldBeThrown
+Output (stderr):
+MESSAGE:
+Assert.Throws() Failure
+Expected: typeof(System.ArgumentException)
+Actual:   typeof(System.NullReferenceException): Object reference not set to an instance of an object.
+---- System.NullReferenceException : Object reference not set to an instance of an object.
+
+STACK TRACE:
+   at DynamicObjectParser.Tests.Parser.Parse(String configuration) in /dotnet-task/src/solution.cs:line 35
+   at DynamicObjectParser.Tests.DynamicObjectParser_tests.<>c.<Parse_NullConfiguration_ArgumentExceptionShouldBeThrown>b__7_0() in /dotnet-task/src/tests.cs:line 87
+----- Inner Stack Trace -----
+   at DynamicObjectParser.Tests.Parser.Parse(String configuration) in /dotnet-task/src/solution.cs:line 35
+   at DynamicObjectParser.Tests.DynamicObjectParser_tests.<>c.<Parse_NullConfiguration_ArgumentExceptionShouldBeThrown>b__7_0() in /dotnet-task/src/tests.cs:line 87
+WRONG ANSWER
+
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_ConfigurationWithBool_ValueIsFalse
+Output (stderr):
+MESSAGE:
+DynamicObjectParser.Tests.InvalidKeyException : Exception of type 'DynamicObjectParser.Tests.InvalidKeyException' was thrown.
+
+STACK TRACE:
+   at DynamicObjectParser.Tests.Parser.Parse(String configuration) in /dotnet-task/src/solution.cs:line 60
+   at DynamicObjectParser.Tests.DynamicObjectParser_tests.Parse_ConfigurationWithBool_ValueIsFalse() in /dotnet-task/src/tests.cs:line 189
+WRONG ANSWER
+
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_EmptyKey2_EmptyKeyExceptionShouldBeThrown
+Output (stderr):
+MESSAGE:
+Assert.Throws() Failure
+Expected: typeof(DynamicObjectParser.Tests.EmptyKeyException)
+Actual:   typeof(DynamicObjectParser.Tests.InvalidKeyException): Exception of type 'DynamicObjectParser.Tests.InvalidKeyException' was thrown.
+---- DynamicObjectParser.Tests.InvalidKeyException : Exception of type 'DynamicObjectParser.Tests.InvalidKeyException' was thrown.
+
+STACK TRACE:
+   at DynamicObjectParser.Tests.Parser.Parse(String configuration) in /dotnet-task/src/solution.cs:line 60
+   at DynamicObjectParser.Tests.DynamicObjectParser_tests.<Parse_EmptyKey2_EmptyKeyExceptionShouldBeThrown>b__10_0() in /dotnet-task/src/tests.cs:line 105
+----- Inner Stack Trace -----
+   at DynamicObjectParser.Tests.Parser.Parse(String configuration) in /dotnet-task/src/solution.cs:line 60
+   at DynamicObjectParser.Tests.DynamicObjectParser_tests.<Parse_EmptyKey2_EmptyKeyExceptionShouldBeThrown>b__10_0() in /dotnet-task/src/tests.cs:line 105
+WRONG ANSWER
+
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_EmptyKey1_EmptyKeyExceptionShouldBeThrown
+Output (stderr):
+MESSAGE:
+Assert.Throws() Failure
+Expected: typeof(DynamicObjectParser.Tests.EmptyKeyException)
+Actual:   typeof(DynamicObjectParser.Tests.InvalidKeyException): Exception of type 'DynamicObjectParser.Tests.InvalidKeyException' was thrown.
+---- DynamicObjectParser.Tests.InvalidKeyException : Exception of type 'DynamicObjectParser.Tests.InvalidKeyException' was thrown.
+
+STACK TRACE:
+   at DynamicObjectParser.Tests.Parser.Parse(String configuration) in /dotnet-task/src/solution.cs:line 60
+   at DynamicObjectParser.Tests.DynamicObjectParser_tests.<Parse_EmptyKey1_EmptyKeyExceptionShouldBeThrown>b__9_0() in /dotnet-task/src/tests.cs:line 99
+----- Inner Stack Trace -----
+   at DynamicObjectParser.Tests.Parser.Parse(String configuration) in /dotnet-task/src/solution.cs:line 60
+   at DynamicObjectParser.Tests.DynamicObjectParser_tests.<Parse_EmptyKey1_EmptyKeyExceptionShouldBeThrown>b__9_0() in /dotnet-task/src/tests.cs:line 99
+WRONG ANSWER
+
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_BigConfiguration3_CorrectResults
+Output (stderr):
+MESSAGE:
+DynamicObjectParser.Tests.InvalidKeyException : Exception of type 'DynamicObjectParser.Tests.InvalidKeyException' was thrown.
+
+STACK TRACE:
+   at DynamicObjectParser.Tests.Parser.Parse(String configuration) in /dotnet-task/src/solution.cs:line 60
+   at DynamicObjectParser.Tests.DynamicObjectParser_tests.Parse_BigConfiguration3_CorrectResults() in /dotnet-task/src/tests.cs:line 295
+WRONG ANSWER
+
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_ConfigurationWithPositiveInteger_ValueIs44444
+Output (stderr):
+MESSAGE:
+DynamicObjectParser.Tests.InvalidKeyException : Exception of type 'DynamicObjectParser.Tests.InvalidKeyException' was thrown.
+
+STACK TRACE:
+   at DynamicObjectParser.Tests.Parser.Parse(String configuration) in /dotnet-task/src/solution.cs:line 60
+   at DynamicObjectParser.Tests.DynamicObjectParser_tests.Parse_ConfigurationWithPositiveInteger_ValueIs44444() in /dotnet-task/src/tests.cs:line 200
+WRONG ANSWER
+
+DynamicObjectParser.Tests.DynamicObjectParser_tests - Parse_UnknownKeys2_UnknownKeyExceptionShouldBeThrown
+Output (stderr):
+MESSAGE:
+DynamicObjectParser.Tests.InvalidKeyException : Exception of type 'DynamicObjectParser.Tests.InvalidKeyException' was thrown.
+
+STACK TRACE:
+   at DynamicObjectParser.Tests.Parser.Parse(String configuration) in /dotnet-task/src/solution.cs:line 60
+   at DynamicObjectParser.Tests.DynamicObjectParser_tests.Parse_UnknownKeys2_UnknownKeyExceptionShouldBeThrown() in /dotnet-task/src/tests.cs:line 121
+WRONG ANSWER
+
+Detected some errors. 
