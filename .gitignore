@@ -1,0 +1,6 @@
+# Compiled source #
+###################
+/.vs/*
+.vs/
+/LeetCodeProblems/bin*
+/LeetCodeProblems/obj/Debug*
