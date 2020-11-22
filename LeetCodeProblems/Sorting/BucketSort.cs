@@ -14,6 +14,11 @@ namespace LeetCodeProblems
 
         //In this case, we will focus on building an algorithm that uses bucketsort to sort an array of integers between 1 and 99
         //we will also assume that the integers in the passed array are evenly distributed
+
+        // Best: Ω(n+k)
+        // Average: Θ(n+k) 	
+        // Worst: O(n^2) 	
+        // Space Complexity Worst: O(n)
         public static List<int> BucketSort1(params int[] x)
         {
             List<int> result = new List<int>();

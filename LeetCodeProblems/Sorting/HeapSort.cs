@@ -11,6 +11,10 @@ namespace LeetCodeProblems.Sorting
     /// The topmost item is stored in an array and Re-establish the heap.
     /// This is done until there are no more items left in the heap.
     /// </summary>
+    // Best: Ω(n log(n))
+    // Average: Θ(n log(n))
+    // Worst: O(n log(n))
+    // Space Complexity Worst: O(1)
     class HeapSort
     {
         int[] inputArray = { 2, 5, 1, 10, 6, 9, 3, 7, 4, 8 };
