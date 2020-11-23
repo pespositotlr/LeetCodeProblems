@@ -6,6 +6,13 @@ namespace LeetCodeProblems.Trees
 {
     //Source: https://www.c-sharpcorner.com/article/working-with-red-black-trees-in-c-sharp/
 
+    //Every node is colored either red or black.
+    //Every NIL node is black.
+    //If a node is red, then both of its children are black.
+    //Every path from a node to a descendant leaf contains the same number of black nodes.
+
+    // It can be shown that a tree that implements the four red-black tree properties has a height that is always less than 2 * log2(n+1), 
+    // where n is the total number of nodes in the tree.For this reason, red-black trees ensure that all operations can be performed within an asymptotic running time of log2 n.
     class RedBlackTreeExample
     {
         public RedBlackTreeNode Search(RedBlackTreeNode node, Object key)
@@ -13,7 +20,7 @@ namespace LeetCodeProblems.Trees
             if (node == null) return null;
             else
             {
-                int result = String.Compare(key.ToString(), node.key.ToString());
+                int result = String.Compare(key.ToString(), node.data.ToString());
                 if (result < 0) return Search(node.left, key);
                 else if (result > 0) return Search(node.right, key);
                 else return node;
@@ -31,7 +38,6 @@ namespace LeetCodeProblems.Trees
         }
         public class RedBlackTreeNode
         {
-            public string key;
             public IComparable data;
             public RedBlackTreeNode left;
             public RedBlackTreeNode right;

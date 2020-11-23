@@ -341,11 +341,13 @@ namespace LeetCodeProblems
 
             //StartupOwnerInvestors2.StartupOwnerInvestors2Main(new string[0]);
 
-            //BinarySearchTree.BinarySearchTree_Main();
+            BinarySearchTree.BinarySearchTree_Main();
 
             //DiceRollSimulatorMemoization.DiceRollSimulatorMemoization_Main();
 
-            FibbonacciChecks.FibbonacciChecks_Main();
+            //FibbonacciChecks.FibbonacciChecks_Main();
+
+            //MergingIntervals.MergingIntervals_Main();
 
         }
     }
