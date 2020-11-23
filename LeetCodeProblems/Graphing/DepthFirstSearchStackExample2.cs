@@ -24,6 +24,7 @@ namespace LeetCodeProblems.Graphing
     // An Iterative C# program to do DFS traversal from 
     // a given source vertex. DFS(int s) traverses vertices 
     // reachable from s. 
+    // (Verticy is another name for Node)
     class GFG
         {
             // This class represents a directed graph using adjacency 

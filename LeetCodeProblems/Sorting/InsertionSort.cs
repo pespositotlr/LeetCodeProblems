@@ -14,7 +14,7 @@ namespace LeetCodeProblems.Sorting
         // Average: Θ(n^2) 	
         // Worst: O(n^2) 	
         // Space Complexity Worst: O(1)
-        static void Main(string[] args)
+        public static void InsertionSortMain()
         {
             int[] numbers = new int[10] { 2, 5, -4, 11, 0, 18, 22, 67, 51, 6 };
             Console.WriteLine("\nOriginal Array Elements :");

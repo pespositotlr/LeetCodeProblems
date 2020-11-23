@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LeetCodeProblems.General
+namespace LeetCodeProblems.Trees
 {
     //Source: https://www.c-sharpcorner.com/article/working-with-red-black-trees-in-c-sharp/
 

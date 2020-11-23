@@ -1,6 +1,7 @@
 ﻿using DynamicObjectParser.Tests;
 using LeetCodeProblems.General;
 using LeetCodeProblems.Graphing;
+using LeetCodeProblems.Trees;
 using System;
 using System.Collections.Generic;
 using static LeetCodeProblems.BreadthFirtstSearch;
@@ -338,7 +339,13 @@ namespace LeetCodeProblems
 
             //GetAllParentheses.MainGetAllParentheses(3);
 
-            StartupOwnerInvestors2.StartupOwnerInvestors2Main(new string[0]);
+            //StartupOwnerInvestors2.StartupOwnerInvestors2Main(new string[0]);
+
+            //BinarySearchTree.BinarySearchTree_Main();
+
+            //DiceRollSimulatorMemoization.DiceRollSimulatorMemoization_Main();
+
+            FibbonacciChecks.FibbonacciChecks_Main();
 
         }
     }
