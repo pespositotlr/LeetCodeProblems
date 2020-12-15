@@ -11,7 +11,7 @@ namespace LeetCodeProblems
 {
     class Program
     {
-        static void Main(string[] args)
+        static async System.Threading.Tasks.Task Main(string[] args)
         {
             Console.WriteLine("Hello World!");
             //int[] inputArray = { 1, 2, 3 };
@@ -341,7 +341,7 @@ namespace LeetCodeProblems
 
             //StartupOwnerInvestors2.StartupOwnerInvestors2Main(new string[0]);
 
-            BinarySearchTree.BinarySearchTree_Main();
+            //BinarySearchTree.BinarySearchTree_Main();
 
             //DiceRollSimulatorMemoization.DiceRollSimulatorMemoization_Main();
 
@@ -349,7 +349,22 @@ namespace LeetCodeProblems
 
             //MergingIntervals.MergingIntervals_Main();
 
+            //await AsyncBreakfast.AsyncBreakfast_TasksWithAwait2_Main();
+
+            //ConvertString.GetConvertedString("(id, name, email, type(id, name, customFields(c1, c2, c3)), externalId)");
+
+            //baseClass obj = new derivedClass();
+            //obj.print1();
+            //obj.print2();
+            //obj.print3();
+
+            //Console.WriteLine((int)days.sunday);
+            //Console.WriteLine((int)days.monday);
+            //Console.WriteLine((int)days.tuesday);
+
+            EventExample.EventExample_Main();
+
         }
+
     }
-    
 }
