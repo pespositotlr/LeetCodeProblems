@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace LeetCodeProblems.General
+namespace LeetCodeProblems.ConceptualExamples
 {
     // https://leetcode.com/problems/merge-intervals/
     // Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, 

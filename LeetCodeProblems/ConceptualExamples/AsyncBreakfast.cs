@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace LeetCodeProblems.General
+namespace LeetCodeProblems.ConceptualExamples
 {
     class AsyncBreakfast
     {

@@ -10,7 +10,7 @@ using System.Linq;
 //using Microsoft.Extensions.DependencyInjection;
 //using Microsoft.Extensions.Hosting;
 
-namespace LeetCodeProblems.General
+namespace LeetCodeProblems.ConceptualExamples
 {
     class StudentInfoAPIExample
     {

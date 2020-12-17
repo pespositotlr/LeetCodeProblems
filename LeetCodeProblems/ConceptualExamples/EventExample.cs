@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LeetCodeProblems.General
+namespace LeetCodeProblems.ConceptualExamples
 {
+    //https://docs.microsoft.com/en-us/dotnet/standard/events/how-to-raise-and-consume-events
     class EventExample
     {
         public static void EventExample_Main()

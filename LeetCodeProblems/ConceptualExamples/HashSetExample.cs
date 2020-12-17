@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LeetCodeProblems.General
+namespace LeetCodeProblems.ConceptualExamples
 {
     // https://programmingwithmosh.com/net/csharp-collections/
     /*

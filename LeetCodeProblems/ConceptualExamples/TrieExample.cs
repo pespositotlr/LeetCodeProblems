@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LeetCodeProblems.General
+namespace LeetCodeProblems.ConceptualExamples
 {
     //Source: https://www.geeksforgeeks.org/trie-insert-and-search/
     //Trie is an efficient information reTrieval data structure. 

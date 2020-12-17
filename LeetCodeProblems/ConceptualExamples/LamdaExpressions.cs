@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LeetCodeProblems
+namespace LeetCodeProblems.ConceptualExamples
 {
     /// <summary>
     /// https://www.csharpstar.com/lambda-expression-in-csharp6/
