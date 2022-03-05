@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using static LeetCodeProblems.BreadthFirtstSearch;
 using static LeetCodeProblems.DepthFirstSearch;
+using static LeetCodeProblems.General.CodeExamples;
 
 namespace LeetCodeProblems
 {
@@ -363,7 +364,39 @@ namespace LeetCodeProblems
             //Console.WriteLine((int)days.monday);
             //Console.WriteLine((int)days.tuesday);
 
-            EventExample.EventExample_Main();
+            //EventExample.EventExample_Main();
+
+            //int[] array = new int[] { 1, 3, 5, 9, 100, 101, 102 };
+            //Console.WriteLine(CodeExamples.BinarySearchIterative(array, 102));
+            //Console.WriteLine(CodeExamples.BinarySearchIterative(array, 2));
+            //Console.WriteLine(CodeExamples.BinarySearchRecursive(array, 102));
+            //Console.WriteLine(CodeExamples.BinarySearchRecursive(array, 2));
+
+            //int[] array = new int[] { 1 };
+            //Console.WriteLine(CodeExamples.BinarySearchIterative(array, 1));
+
+            //CodeExamples.ArgumentOutOfRangeExceptionExample(array, -1);
+            //CodeExamples.ArgumentOutOfRangeExceptionExample(array, 99);
+
+            //CodeExamples.CustomLogExceptionExample();
+            //CodeExamples.ExampleInputProgram();
+
+            //Elephant2 el2 = new Elephant2();
+            //Console.WriteLine(el2.Color());
+            //Console.WriteLine(el2.TrunkLength());
+
+            //Animal2 al2 = Animal2.MakeAnimal("Elephant");
+
+            //Elephant2 el2 = al2 as Elephant2;
+
+            //if (el2 != null)
+            //    el2.TrunkLength();
+
+            //Elephant2 el2a = (Elephant2)al2;
+            //el2a.TrunkLength();
+
+            CateringExercise cateringExercise = new CateringExercise();
+            await cateringExercise.CateringExercise_Main();
 
         }
 

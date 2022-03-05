@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "D2RT2qHwehaBw/TIc8UAF0jj4Q/odwp3p227YLSNEclLJ9ZJFs9B3sWhFvqzZMwvQyhTO/HVd8lhdV8XMNdpxw==",
+  "dgSpecHash": "LC0g3/+6VR3WCM0fpDMpygKx9RknAAWqh1c5+F2NIposZ+mLhQzhidulwHTpS3F9ejvQ7Y1NDjXreU2Xs1QpxQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\kewl0\\source\\repos\\LeetCodeProblems\\LeetCodeProblems\\LeetCodeProblems.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,8 @@
     "C:\\Users\\kewl0\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\kewl0\\.nuget\\packages\\microsoft.office.interop.excel\\15.0.4795.1000\\microsoft.office.interop.excel.15.0.4795.1000.nupkg.sha512",
     "C:\\Users\\kewl0\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\kewl0\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\kewl0\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512",
     "C:\\Users\\kewl0\\.nuget\\packages\\system.diagnostics.contracts\\4.3.0\\system.diagnostics.contracts.4.3.0.nupkg.sha512",
     "C:\\Users\\kewl0\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
     "C:\\Users\\kewl0\\.nuget\\packages\\system.private.servicemodel\\4.7.0\\system.private.servicemodel.4.7.0.nupkg.sha512",

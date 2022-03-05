@@ -37,6 +37,29 @@ namespace LeetCodeProblems
             }
         }
 
+        // [Head  ]\[NodeA ]\[NodeB    ]
+        // [Next=A]/[Next=B]/[Next=null]
+        // 
+        // Step 1 (current = Head): 
+        // current = head
+        // current (head) points to *null*
+        // next = NodeA
+        // prev = head
+        // current = NodeA
+        //
+        // Step 2 (Current = NodeA):
+        // current = NodeA
+        // current (NodeA) points to *head*
+        // next = NodeB
+        // prev = NodeA
+        // current = NodeB
+
+        //End Result
+        // [Head     ]/[NodeA    ]/[NodeB    ]
+        // [Next=NULL]\[Next=Head]\[Next=A]
+        // You've gone through each item, held onto what its old "next" was and then changed its "next" to point to the "previous" one. 
+        // Then you shift forward until you have no more "nexts".
+
         // function to reverse the list 
         public void ReverseList()
         {
