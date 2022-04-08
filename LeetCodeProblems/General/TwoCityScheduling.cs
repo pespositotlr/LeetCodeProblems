@@ -10,6 +10,7 @@ namespace LeetCodeProblems
         {
             int total = 0;
             List<(int, int)> differenceList = new List<(int, int)>();
+            //Could also do this as int[][][] just holding diff, costA, and costB. You could also make these an object with three values.
 
             //Calculate difference (Positive values mean B is cheaper, negative values mean A is cheaper)
             for (int i = 0; i < costs.Length; i++)
@@ -20,13 +21,14 @@ namespace LeetCodeProblems
 
             //Sort the list of differences (Descending, so cheapter B values first)
             differenceList.Sort((x, y) => y.Item2.CompareTo(x.Item2));
+            //The sort causes this to be Big-O(nlogn)
 
             //Based on the sorted differences, add the A cost or B cost to the total
             //1st half are the cheaper B values and 2nd half are the cheaper A values 
             int j = 0;
             foreach ((int, int) items in differenceList)
             {
-                if (j < Math.Floor((double)costs.Length / 2))
+                if (j < Math.Floor((double)costs.Length / 2)) //Lets you know if you're in the first half
                 {
                     total += costs[items.Item1][1];
                 }

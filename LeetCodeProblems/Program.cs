@@ -395,8 +395,12 @@ namespace LeetCodeProblems
             //Elephant2 el2a = (Elephant2)al2;
             //el2a.TrunkLength();
 
-            CateringExercise cateringExercise = new CateringExercise();
-            await cateringExercise.CateringExercise_Main();
+            //CateringExercise cateringExercise = new CateringExercise();
+            //await cateringExercise.CateringExercise_Main();
+
+            var getCoinChangeResult = CoinChange.getCoinChange(new List<int> { 1, 3, 4, 5 }, 99);
+            Console.WriteLine(getCoinChangeResult);
+            Console.ReadLine();
 
         }
 

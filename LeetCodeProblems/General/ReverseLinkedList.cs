@@ -55,7 +55,7 @@ namespace LeetCodeProblems
         // current = NodeB
 
         //End Result
-        // [Head     ]/[NodeA    ]/[NodeB    ]
+        // [Head     ]/[NodeA    ]/[NodeB ]
         // [Next=NULL]\[Next=Head]\[Next=A]
         // You've gone through each item, held onto what its old "next" was and then changed its "next" to point to the "previous" one. 
         // Then you shift forward until you have no more "nexts".
