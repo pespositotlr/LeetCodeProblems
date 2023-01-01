@@ -398,10 +398,15 @@ namespace LeetCodeProblems
             //CateringExercise cateringExercise = new CateringExercise();
             //await cateringExercise.CateringExercise_Main();
 
-            var getCoinChangeResult = CoinChange.getCoinChange(new List<int> { 1, 3, 4, 5 }, 99);
-            Console.WriteLine(getCoinChangeResult);
-            Console.ReadLine();
+            //var getCoinChangeResult = CoinChange.getCoinChange(new List<int> { 1, 3, 4, 5 }, 99);
+            //Console.WriteLine(getCoinChangeResult);
+            //Console.ReadLine();
 
+            var kthLargest = new KLargestElementsFromList();
+            kthLargest.Test1();
+            kthLargest.Test2();
+
+            Console.ReadLine();
         }
 
     }

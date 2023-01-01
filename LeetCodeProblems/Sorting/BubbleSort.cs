@@ -46,6 +46,7 @@ namespace LeetCodeProblems.Sorting
                 {
                     if (inputArray[i] > inputArray[i + 1])
                     {
+                        //Swap values of [i] and [i+1]
                         temp = inputArray[i + 1];
                         inputArray[i + 1] = inputArray[i];
                         inputArray[i] = temp;
