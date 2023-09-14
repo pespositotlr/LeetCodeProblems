@@ -402,9 +402,12 @@ namespace LeetCodeProblems
             //Console.WriteLine(getCoinChangeResult);
             //Console.ReadLine();
 
-            var kthLargest = new KLargestElementsFromList();
-            kthLargest.Test1();
-            kthLargest.Test2();
+            //var kthLargest = new KLargestElementsFromList();
+            //kthLargest.Test1();
+            //kthLargest.Test2();
+
+            var isPalindrome = IsValidPalindrom.GetIsValidPalindrome3("race: car");
+            Console.WriteLine(isPalindrome.ToString());
 
             Console.ReadLine();
         }
