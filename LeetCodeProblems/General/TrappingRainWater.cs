@@ -117,5 +117,40 @@ namespace LeetCodeProblems
             return res;
         }
 
+        /// <summary>
+        /// Fourth method that's easier to read.
+        /// Keep track of a leftmax and a rightmax.
+        /// Formula for fighting the current water amount is Min(leftmax, rightmax) - heights[currentIndex]
+        /// You incredment tha local max if you get to a new max moving from the left or the right.
+        /// </summary>
+        /// <param name="heights"></param>
+        /// <returns></returns>
+        public int Trap4(int[] heights)
+        {
+            var result = 0;
+            var l = 0;
+            var r = heights.Length - 1;
+            var leftMax = 0;
+            var rightMax = heights[r];
+
+            while (l < r)
+            {
+                if (leftMax < rightMax)
+                {
+                    l++;
+                    leftMax = Math.Max(leftMax, heights[l]);
+                    result += leftMax - heights[l];
+                }
+                else
+                {
+                    r--;
+                    rightMax = Math.Max(rightMax, heights[r]);
+                    result += rightMax - heights[r];
+                }
+            }
+
+            return result;
+        }
+
     }
 }

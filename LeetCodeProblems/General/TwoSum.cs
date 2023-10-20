@@ -11,9 +11,10 @@ namespace LeetCodeProblems.General
     // Given nums = [2, 7, 11, 15], target = 9,
     // Because nums[0] + nums[1] = 2 + 7 = 9,
     // return [0, 1].
-    class TwoSumProblem
+    // The trick is the dictionary keys are the input array values and the dictionary values are the indices
+    class TwoSum
     {
-        public static int[] TwoSum(int[] nums, int target)
+        public static int[] GetTwoSum(int[] nums, int target)
         {
             var numsDictionary = new Dictionary<int, int>();
             var difference = 0;
