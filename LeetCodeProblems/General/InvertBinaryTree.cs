@@ -7,11 +7,27 @@ namespace LeetCodeProblems.General
     //Source: https://stackoverflow.com/questions/9460255/reverse-a-binary-tree-left-to-right
     class InvertBinaryTree
     {
+        public class TreeNode
+        {
+          public int val;
+          public TreeNode left;
+          public TreeNode right;
+          public TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
+            {
+                this.val = val;
+                this.left = left;
+                this.right = right;
+            }
+        }
+
         public static void InvertTree(TreeNode root)
         {
-            TreeNode temp = root.right;
-            root.right = root.left;
-            root.left = temp;
+            if (root.right != null)
+            {
+                TreeNode temp = root.right;
+                root.right = root.left;
+                root.left = temp;
+            }
 
             if (root.left != null)
             {

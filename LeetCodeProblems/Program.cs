@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using static LeetCodeProblems.BreadthFirtstSearch;
 using static LeetCodeProblems.DepthFirstSearch;
 using static LeetCodeProblems.General.CodeExamples;
+using System.Drawing.Drawing2D;
 
 namespace LeetCodeProblems
 {
@@ -406,8 +407,19 @@ namespace LeetCodeProblems
             //kthLargest.Test1();
             //kthLargest.Test2();
 
-            var isPalindrome = IsValidPalindrom.GetIsValidPalindrome3("race: car");
-            Console.WriteLine(isPalindrome.ToString());
+            //var isPalindrome = IsValidPalindrom.GetIsValidPalindrome3("race: car");
+            //Console.WriteLine(isPalindrome.ToString());
+
+            //int[][] matrix = new int[][] { 
+            //    new int [] { 1, 3, 5, 7 },
+            //    new int [] { 10, 11, 16, 20 }, 
+            //    new int [] { 23, 30, 34, 60 } 
+            //};
+            //int target = 3;
+            //Console.WriteLine(SearchA2DMatrix.SearchMatrix(matrix, target));
+            int[] piles = { 3, 5, 7, 11 };
+            int h = 8;
+            Console.WriteLine(KokoEatingBananas.MinEatingSpeed(piles, h)); 
 
             Console.ReadLine();
         }

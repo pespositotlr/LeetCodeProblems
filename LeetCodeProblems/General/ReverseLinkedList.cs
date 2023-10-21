@@ -66,9 +66,9 @@ namespace LeetCodeProblems
             Node prev = null, current = head, next = null;
             while (current != null)
             {
-                next = current.next;
-                current.next = prev;
-                prev = current;
+                next = current.next; //Temporarily hold the next node to reverse
+                current.next = prev; //Reverse pointer of current node
+                prev = current; //Shift forward one node (Need a new prev to point to next)
                 current = next;
             }
             head = prev;
