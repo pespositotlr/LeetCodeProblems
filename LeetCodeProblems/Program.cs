@@ -417,11 +417,16 @@ namespace LeetCodeProblems
             //};
             //int target = 3;
             //Console.WriteLine(SearchA2DMatrix.SearchMatrix(matrix, target));
-            int[] piles = { 3, 5, 7, 11 };
-            int h = 8;
-            Console.WriteLine(KokoEatingBananas.MinEatingSpeed(piles, h)); 
 
-            Console.ReadLine();
+            //int[] piles = { 3, 5, 7, 11 };
+            //int h = 8;
+            //Console.WriteLine(KokoEatingBananas.MinEatingSpeed(piles, h)); 
+
+            //TopKFrequent.GetTopKFrequent(new int[] { 3, 3, 3, 2, 2, 1, 4, 8, 8, 8 }, 2);
+
+            var ip = new IntegerPermutations();
+            var result = ip.Permute2(new int[] { 1, 2, 3 });
+            Console.WriteLine(result.ToString());
         }
 
     }

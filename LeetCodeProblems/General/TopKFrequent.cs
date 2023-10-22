@@ -17,14 +17,16 @@ namespace LeetCodeProblems.General
             //It's possible to have ties (But it doesn't say what to do then)
 
             //we count how many times each number appears
-            //Key = Frequency
-            //Value = Numerical Value
+            //Key = Numerical Value
+            //Value = Frequency (count of that numerical value)
             foreach (var num in nums)
             {
                 numberToCount.TryGetValue(num, out var temp);
                 numberToCount[num] = temp + 1;
             }
 
+            //Now we bucket-sort them into buckets where each bucket is based on frequency
+            //and the values are lists of which numbers have that frequency
             List<int>[] bucket = new List<int>[nums.Length + 1];
 
             //we allocate an array in the size of the original list of numbers

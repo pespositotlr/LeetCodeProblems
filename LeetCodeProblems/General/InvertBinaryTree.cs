@@ -22,7 +22,7 @@ namespace LeetCodeProblems.General
 
         public static void InvertTree(TreeNode root)
         {
-            if (root.right != null)
+            if (root != null)
             {
                 TreeNode temp = root.right;
                 root.right = root.left;
