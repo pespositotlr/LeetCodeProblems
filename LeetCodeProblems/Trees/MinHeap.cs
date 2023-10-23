@@ -17,6 +17,8 @@ namespace LeetCodeProblems.Trees
             _elements = new int[size];
         }
 
+        public int Length { get { return _size; } }
+
         private int GetLeftChildIndex(int elementIndex) => 2 * elementIndex + 1;
         private int GetRightChildIndex(int elementIndex) => 2 * elementIndex + 2;
         private int GetParentIndex(int elementIndex) => (elementIndex - 1) / 2;
