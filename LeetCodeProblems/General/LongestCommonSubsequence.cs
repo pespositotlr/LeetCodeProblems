@@ -74,5 +74,53 @@ namespace LeetCodeProblems.General
 
             Console.Write("Length of LCS is" + " " + lcs(X, Y));
         }
+
+        ///<summary>
+        /// https://leetcode.com/problems/longest-common-subsequence/
+        /// https://www.youtube.com/watch?v=Ua0GhsJSlWM
+        /// Ex. ace, abcde
+        ///        j
+        ///      a c e -
+        ///   a +1
+        ///   b   +0+0
+        /// i c   +1
+        ///   d     +0 +0
+        ///   e     +1
+        ///   -        +0
+        /// You want to get the top-left value at a,a
+        /// If you match, you go diagonally down right
+        /// Otherwise you go right or down (You're removing b)
+        /// You're essentially eliminating the top left and comparing the bottom right as "subproblems"
+        /// The c's match so go diagonally down-right (You're eliminating the top c and left c)
+        /// When you don't have a match you go right or down. And you take whatever is the max of either one.
+        /// If you get a match, +1. If you don't get a match, +0 (including out of bounds).
+        /// You can think of going down or right to going to later recurrsions
+        /// Once you go back up your path you get three +1's so your result is 3.
+        /// So this is a bottom-up Dynamic Programming solution. You first get the bottom value and work your way up to the rersult.
+        /// Time complexity is O(n*m) the lenfth of the two strings
+        /// Essentially you're finding the LCS of the ENDS of the two strings and whenever you get a match you move towards the begining
+        /// </summary>
+        /// <param name="text1"></param>
+        /// <param name="text2"></param>
+        /// <returns></returns>
+        public static int GetLongestCommonSubsequence(string text1, string text2)
+        {
+            //values are 0 by default
+            int[,] dp = new int[text1.Length + 1, text2.Length + 1];
+
+            //Create the dp graph shown above. Bottom-up approach where values are added and we work our way up to 0,0 which has the answer
+            for(int i = text1.Length - 1; i > -1; i--)
+            {
+                for (int j = text2.Length - 1; j > -1; j--)
+                {
+                    if (text1[i] == text2[j])
+                        dp[i,j] = 1 + dp[i + 1,j + 1]; //If items match, assign the value found down and to the right + 1
+                    else
+                        dp[i, j] = Math.Max(dp[i, j + 1], dp[i+1,j]); //If items down't match assign the max of below and right
+                }
+            }
+
+            return dp[0, 0];
+        }
     }
 }

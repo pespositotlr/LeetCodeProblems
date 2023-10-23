@@ -424,9 +424,11 @@ namespace LeetCodeProblems
 
             //TopKFrequent.GetTopKFrequent(new int[] { 3, 3, 3, 2, 2, 1, 4, 8, 8, 8 }, 2);
 
-            var ip = new IntegerPermutations();
-            var result = ip.Permute2(new int[] { 1, 2, 3 });
-            Console.WriteLine(result.ToString());
+            //var ip = new IntegerPermutations();
+            //var result = ip.Permute2(new int[] { 1, 2, 3 });
+            //Console.WriteLine(result.ToString());
+
+            Console.WriteLine(LongestCommonSubsequence.GetLongestCommonSubsequence("ace", "abcde"));
         }
 
     }

@@ -55,10 +55,12 @@ namespace LeetCodeProblems.General
 
             void Backtrack(int i)
             {
+                //Once i is greater than nums.length we save that "row"
                 if (i >= nums.Length)
                 {
                     res.Add(new List<int>(nums));
                 }
+                //While i is less than the length of nums we swap values around
                 for (int j = i; j < nums.Length; j++)
                 {
                     Swap(i, j);
