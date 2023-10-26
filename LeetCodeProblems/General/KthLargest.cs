@@ -98,6 +98,26 @@ namespace LeetCodeProblems.General
             return list;
         }
 
+        /// <summary>
+        /// https://medium.com/@dorlugasigal/c-10-priorityqueue-is-here-5067e2628470
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <param name="k"></param>
+        /// <returns></returns>
+        int FindKthLargestPriorityQueue(int[] nums, int k)
+        {
+            PriorityQueue<int, int> pq = new();
+            foreach(var item in nums)
+            {
+                pq.Enqueue(item, item);
+                if (pq.Count > k)
+                    pq.Dequeue();
+            }
+
+            return pq.Peek();
+
+        }
+
         // Driver Code
         public static void Main_Kth(String[] args)
         {

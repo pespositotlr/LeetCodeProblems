@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5PMB2bfVPvWg8rqxiVpkDlHcao3tB8LOScg03adJ+kFAb64ePs7KCRemdISmj8AMIrENpNjcv4hLDj3XWEVgwQ==",
+  "dgSpecHash": "Y+5w5hHbFDVC4PRdLHgHbZap5344Yl5sNuB2PjeTtHmRj/qoQToG/hkGx0G3svr3l3jLgIzYpb9B7+oOax4dyg==",
   "success": true,
   "projectFilePath": "C:\\Users\\kewl0\\source\\repos\\LeetCodeProblems\\LeetCodeProblems\\LeetCodeProblems.csproj",
   "expectedPackageFiles": [
@@ -28,10 +28,10 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.Office.Interop.Excel 15.0.4795.1000' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "message": "Package 'Microsoft.Office.Interop.Excel 15.0.4795.1000' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.Office.Interop.Excel",
       "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
+        "net7.0"
       ]
     }
   ]
