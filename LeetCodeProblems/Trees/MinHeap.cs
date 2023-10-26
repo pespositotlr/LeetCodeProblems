@@ -6,6 +6,10 @@ namespace LeetCodeProblems.Trees
 {
     /// <summary>
     /// https://egorikas.com/max-and-min-heap-implementation-with-csharp/
+    /// Min heap definition:
+    /// https://www.youtube.com/watch?v=t0Cq6tVNRBA
+    /// The topmost item (index 0) is the smalles tand its children are bigger. Then their children are bigger, etc.
+    /// Not necessailry sorted like a balanced binary search tree.
     /// </summary>
     class MinHeap
     {

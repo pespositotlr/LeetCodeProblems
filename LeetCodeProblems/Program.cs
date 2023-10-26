@@ -403,9 +403,6 @@ namespace LeetCodeProblems
             //Console.WriteLine(getCoinChangeResult);
             //Console.ReadLine();
 
-            //var kthLargest = new KLargestElementsFromList();
-            //kthLargest.Test1();
-            //kthLargest.Test2();
 
             //var isPalindrome = IsValidPalindrom.GetIsValidPalindrome3("race: car");
             //Console.WriteLine(isPalindrome.ToString());
@@ -428,7 +425,9 @@ namespace LeetCodeProblems
             //var result = ip.Permute2(new int[] { 1, 2, 3 });
             //Console.WriteLine(result.ToString());
 
-            Console.WriteLine(LongestCommonSubsequence.GetLongestCommonSubsequence("ace", "abcde"));
+            //Console.WriteLine(LongestCommonSubsequence.GetLongestCommonSubsequence("ace", "abcde"));
+
+            Console.WriteLine(MergingIntervals.Merge2(new int[][] { new int[] { 1, 3 }, new int[] { 2, 6 }, new int[] { 8, 10 }, new int[] { 15, 18 } }));
         }
 
     }

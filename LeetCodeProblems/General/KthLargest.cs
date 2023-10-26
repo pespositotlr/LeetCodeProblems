@@ -99,7 +99,7 @@ namespace LeetCodeProblems.General
         }
 
         // Driver Code
-        public static void Main(String[] args)
+        public static void Main_Kth(String[] args)
         {
             min = new Queue<int>();
             k = 3;

@@ -88,5 +88,72 @@ namespace LeetCodeProblems.ConceptualExamples
             mergeIntervals(arr);
             return 0;
         }
+
+        public static int[][] Merge(int[][] intervals)
+        {
+            int arrayLength = intervals.Length;
+            // Test if the given set has at least one interval 
+            if (arrayLength <= 0)
+                return null;
+
+            var sortedIntervals = intervals.OrderBy(x => x[0]).ToList();
+            Stack<int[]> intervalStack = new Stack<int[]>();
+            intervalStack.Push(sortedIntervals[0]);
+
+            // Start from the next interval and merge if necessary 
+            for (int i = 1; i < arrayLength; i++)
+            {
+                // get interval from stack top 
+                int[] top = intervalStack.Peek();
+
+                // if current interval is not overlapping with stack top, push it to the stack 
+                if (top[1] < sortedIntervals[i][0])
+                    intervalStack.Push(sortedIntervals[i]);
+
+                // Otherwise update the ending time of top if ending of current interval is more 
+                else if (top[1] < sortedIntervals[i][1])
+                {
+                    top[1] = sortedIntervals[i][1];
+                    intervalStack.Pop();
+                    intervalStack.Push(top);
+                }
+            }
+
+            int[][] result = new int[intervalStack.Count][];
+            int j = 0;
+            while (intervalStack.Count > 0)
+            {
+                int[] t = intervalStack.Pop();
+                result[j] = new int[] { t[0], t[1] };
+                j++;
+            }
+
+            return result;
+        }
+
+        public static int[][] Merge2(int[][] intervals)
+        {
+            var arrayLength = intervals.Length;
+            if (arrayLength <= 0)
+                return null;
+
+            var sortedIntervals = intervals.OrderBy(x => x[0]).ToList();
+            int[][] result = new int[][] { sortedIntervals[0].ToArray() }; //Start with the 0th item in the result set
+
+            for (int i = 1; i < arrayLength; i++)
+            {
+                int start = sortedIntervals[i][0];
+                int end = sortedIntervals[i][1];
+                int lastEnd = result[result.Length - 1][1];
+
+                if(start <= lastEnd) //Values are overlapping so merge
+                    result[result.Length - 1][1] = Math.Max(lastEnd, end);
+                //else
+                    //result.Concat(new int[] { start, end } ); //If not, leave it in the result as-is
+            }
+            //This way doesn't work in C# because you can't concat to an array so you'd need ot turn it into a list and back
+            return result;
+        }
+
     }
 }
