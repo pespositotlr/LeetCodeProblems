@@ -427,7 +427,9 @@ namespace LeetCodeProblems
 
             //Console.WriteLine(LongestCommonSubsequence.GetLongestCommonSubsequence("ace", "abcde"));
 
-            Console.WriteLine(MergingIntervals.Merge2(new int[][] { new int[] { 1, 3 }, new int[] { 2, 6 }, new int[] { 8, 10 }, new int[] { 15, 18 } }));
+            //Console.WriteLine(MergingIntervals.Merge2(new int[][] { new int[] { 1, 3 }, new int[] { 2, 6 }, new int[] { 8, 10 }, new int[] { 15, 18 } }));
+
+            FishFarming.FishMain(null);
         }
 
     }
