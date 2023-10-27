@@ -86,51 +86,46 @@ namespace LeetCodeProblems.General
             Dictionary<int,int> fishDictionary = new Dictionary<int,int>();
             List<int> babyFish = new List<int>();
 
+            //Add the original list of fish to the dictionary, one for each day
             foreach(int fish in fishes)
             {
-                if (fishDictionary.ContainsKey(fish))
-                    fishDictionary[fish]++;
+                if (fishDictionary.ContainsKey(7 - fish))
+                    fishDictionary[7 - fish]++;
                 else
-                    fishDictionary.Add(fish, 1);
+                    fishDictionary.Add(7 - fish, 1); //Use 7- to get the positive days rather than the countdowns
             }
 
 
             for (int i = 1; i <= days; i++)
             {
                 for (int k = 0; k < babyFish.Count; k++)
-                    babyFish[k]--;
+                    babyFish[k]++; //The babies age up one day
 
                 //Generation born on this day doubles
-                if (fishDictionary.ContainsKey(i % daysForAdultToGiveBirth))
+                if (fishDictionary.ContainsKey((i % daysForAdultToGiveBirth)))
                 {
                     int fishToBeBorn = fishDictionary[i % daysForAdultToGiveBirth];
 
                     //Add the baby fish and give them a value of 2 before they reach adulthood
                     for (int j = 0; j < fishToBeBorn; j++)
-                        babyFish.Add(daysToAdulthood);
+                        babyFish.Add(0);
                 }
-
-                List<int> babyFishIndexesToRemove = new List<int>();
 
                 //Grow baby fish into adults
                 for (int f = 0; f < babyFish.Count; f++)
                 {
-                    if (babyFish[f] <= 0)
+                    if (babyFish[f] >= daysToAdulthood)
                     {
                         //No longer a baby. All grown up.
-                        babyFishIndexesToRemove.Add(f);
+                        babyFish.RemoveAt(f);
+                        f--; //Move the index back because one was removed.
 
                         //Add to adult bucket for that day
-                        if (!fishDictionary.ContainsKey(i % daysForAdultToGiveBirth))
-                            fishDictionary.Add(i % daysForAdultToGiveBirth, 1);
+                        if (fishDictionary.ContainsKey(i % daysForAdultToGiveBirth))
+                            fishDictionary[i % daysForAdultToGiveBirth]++; 
                         else
-                            fishDictionary[i % daysForAdultToGiveBirth]++;
+                            fishDictionary.Add(i % daysForAdultToGiveBirth, 1);
                     }
-                }
-
-                for (int j = 0; j < babyFishIndexesToRemove.Count; j++)
-                {
-                    babyFish.RemoveAt(j);
                 }
 
             }
@@ -138,9 +133,10 @@ namespace LeetCodeProblems.General
             //Calculate the total fish we have
             int totalCount = babyFish.Count;
 
-            for (int j = 0; j < fishDictionary.Count; j++)
+            for (int j = 0; j < daysForAdultToGiveBirth; j++)
             {
-                totalCount += fishDictionary[j];
+                if(fishDictionary.ContainsKey(j))
+                    totalCount += fishDictionary[j];
             }
 
             return totalCount;
