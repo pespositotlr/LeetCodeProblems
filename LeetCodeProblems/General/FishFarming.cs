@@ -120,11 +120,14 @@ namespace LeetCodeProblems.General
                         babyFish.RemoveAt(f);
                         f--; //Move the index back because one was removed.
 
+                        //Should be 0 so it gives birth in 6 days
+                        int dayToAssignBaby = 0;
+
                         //Add to adult bucket for that day
-                        if (fishDictionary.ContainsKey(i % daysForAdultToGiveBirth))
-                            fishDictionary[i % daysForAdultToGiveBirth]++; 
+                        if (fishDictionary.ContainsKey(dayToAssignBaby))
+                            fishDictionary[dayToAssignBaby]++; 
                         else
-                            fishDictionary.Add(i % daysForAdultToGiveBirth, 1);
+                            fishDictionary.Add(dayToAssignBaby, 1);
                     }
                 }
 
