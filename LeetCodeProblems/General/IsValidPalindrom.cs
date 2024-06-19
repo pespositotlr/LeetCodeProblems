@@ -29,6 +29,7 @@ namespace LeetCodeProblems.General
 
             while (l < r)
             {
+                //Skip non-letters and non-digits
                 while (l < r && !char.IsLetterOrDigit(s[l]))
                     l++;
 
