@@ -23,14 +23,15 @@ namespace LeetCodeProblems.General
 
             while (left <= right)
             {
-                //Alternative: mid = left + ((right - left) / 2); //Avoid adding left and right together to avoid overflow
-                mid = (left + right) / 2;
+                //Alternative: mid = left + ((right - left) / 2); 
+                //Avoid adding left and right together to avoid overflow
+                mid = (left + right) / 2; //Remember mid will always be an integer and within the bounds of the array
                 if (nums[mid] > target) //If midpoint is larger than target, move right bound left
                     right = mid - 1;
                 else if (nums[mid] < target) //If midpoint is smaller than target, move left bound right
                     left = mid + 1;
                 else 
-                    return mid; 
+                    return mid; //nums[mid] is the target so return it
             }
 
             return -1; //Did not find a result
