@@ -1,9 +1,19 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using System.Text;
 
 namespace LeetCodeProblems
 {
+    /// <summary>
+    /// https://leetcode.com/problems/trapping-rain-water/description/
+    /// Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
+    /// Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]
+    /// Output: 6    
+    /// Explanation: The above elevation map(black section) is represented by array[0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]. 
+    /// In this case, 6 units of rain water (blue section) are being trapped.
+    /// </summary>
     class TrappingRainWater    
     {
         /// <summary>
@@ -88,6 +98,8 @@ namespace LeetCodeProblems
 
         /// <summary>
         /// more concise solution for solution 2. we do not need to find the max value index.
+        /// Max is just highest you've been to on either side.
+        /// Instead of sliding the two sides equally, you're shifting based on which side's value is lower.
         /// </summary>
         /// <param name="heights"></param>
         /// <returns></returns>
@@ -120,8 +132,8 @@ namespace LeetCodeProblems
         /// <summary>
         /// Fourth method that's easier to read.
         /// Keep track of a leftmax and a rightmax.
-        /// Formula for fighting the current water amount is Min(leftmax, rightmax) - heights[currentIndex]
-        /// You incredment tha local max if you get to a new max moving from the left or the right.
+        /// Formula for finding the current water amount is Min(leftmax, rightmax) - heights[currentIndex]
+        /// You increment tha local max if you get to a new max moving from the left or the right.
         /// </summary>
         /// <param name="heights"></param>
         /// <returns></returns>
