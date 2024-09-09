@@ -21,7 +21,7 @@ namespace LeetCodeProblems.General
     }
     public class HashingExample
     {
-        public static void Main(string[] args)
+        public static void MainHashing(string[] args)
         {
             string key = "exampleKey";
             int hashCode = key.GetHashCode();
@@ -32,7 +32,7 @@ namespace LeetCodeProblems.General
     {
         private const int BucketCount = 16;
 
-        public static void Main(string[] args)
+        public static void MainBucketExample(string[] args)
         {
             string key = "exampleKey";
             int hashCode = key.GetHashCode();
@@ -53,7 +53,7 @@ namespace LeetCodeProblems.General
         private const int BucketCount = 16;
         private static List<KeyValuePair<string, int>>[] buckets;
 
-        public static void Main(string[] args)
+        public static void MainCollisionExample(string[] args)
         {
             buckets = new List<KeyValuePair<string, int>>[BucketCount];
             AddToDictionary("key1", 1);

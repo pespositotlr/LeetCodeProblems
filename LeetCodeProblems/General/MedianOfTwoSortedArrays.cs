@@ -155,7 +155,7 @@ namespace LeetCodeProblems.General
             }
             return low;
         }
-        public static void Main(String[] args)
+        public static void MainMedianOfTwoSortedArrays(String[] args)
         {
             int[] arr = { 1, 4, 5, 6, 10 };
             int[] brr = { 2, 3, 4, 5, 7 };

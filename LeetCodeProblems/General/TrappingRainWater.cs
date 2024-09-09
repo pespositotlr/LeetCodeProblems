@@ -157,6 +157,7 @@ namespace LeetCodeProblems
                 {
                     r--;
                     rightMax = Math.Max(rightMax, heights[r]);
+
                     result += rightMax - heights[r];
                 }
             }
