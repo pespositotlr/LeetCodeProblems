@@ -8,6 +8,11 @@ namespace LeetCodeProblems
     * @see <a href="https://leetcode.com/problems/lru-cache/">LRU Cache</a>
     * 
     * Julia, work on C# version
+    * The key to this is a *dummy head* with value of 0 points to the "next" which is a real value
+    * and the last item on the list is a *dummy tail*  with value of 0 that the last item in the cache points to.
+    * When you're at capacity, you remove the one pointing to the dummy tail.
+    * If you do a "get" remove it and add it to the top so it's more recent.
+    * To do a remove, make the one pointing to it point to the next one and the one after it point to its previous one.
     */
 
     public class LRUCache

@@ -2,7 +2,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace LeetCodeProblems.General
+namespace LeetCodeProblems.ConceptualExamples
 {
 
     //https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/implementing-dispose
@@ -51,7 +51,7 @@ namespace LeetCodeProblems.General
             }
             else if (_upperWord > 0)
             {
-                Size = (((long)_upperWord) << 32) + Size;
+                Size = ((long)_upperWord << 32) + Size;
             }
         }
 
