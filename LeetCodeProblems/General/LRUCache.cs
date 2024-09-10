@@ -99,12 +99,12 @@ namespace LeetCodeProblems
         {
             target.next = dummyHead;
             target.prev = dummyHead.prev;
-            dummyHead.prev.next = target;
-            dummyHead.prev = target;
+            dummyHead.prev.next = target; //Old 1st in line now points to new target next
+            dummyHead.prev = target; //Dummy head now points to new target prev
         }
 
         // Next---^Removed node^---Prev
-        // \____old noes now linked___/ 
+        // \____old nodes now linked___/ 
         private void remove(ListNode target)
         {
             target.next.prev = target.prev;

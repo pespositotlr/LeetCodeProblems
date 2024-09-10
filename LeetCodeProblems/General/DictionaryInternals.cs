@@ -53,7 +53,7 @@ namespace LeetCodeProblems.General
         private const int BucketCount = 16;
         private static List<KeyValuePair<string, int>>[] buckets;
 
-        public static void MainCollisionExample(string[] args)
+        public static void CollusionExampleMain(string[] args)
         {
             buckets = new List<KeyValuePair<string, int>>[BucketCount];
             AddToDictionary("key1", 1);
