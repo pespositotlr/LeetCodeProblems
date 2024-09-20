@@ -53,9 +53,8 @@ namespace LeetCodeProblems.General
         }
 
 
-
         // Returns the value of maximum profit
-        static int knapSackRec(int maxWeight, int[] weights, int[] values, int numberOfItems, int[,] dpMemo)
+        static int knapSackRec_dp(int maxWeight, int[] weights, int[] values, int numberOfItems, int[,] dpMemo)
         {
 
             // Base condition
@@ -66,14 +65,14 @@ namespace LeetCodeProblems.General
             if (weights[numberOfItems - 1] > maxWeight) //This item weighs too much so don't add it. Go to next item. (decrement numberOfItems)
             {
                 // Store the value of function call stack in table before return
-                return dpMemo[numberOfItems, maxWeight] = knapSackRec(maxWeight, weights, values, numberOfItems - 1, dpMemo);
+                return dpMemo[numberOfItems, maxWeight] = knapSackRec_dp(maxWeight, weights, values, numberOfItems - 1, dpMemo);
             }
             else //This item IS small enough to fit in your capacity so keep recurring with this item added to your running subtotal
             {
                 // Return value of table after storing
                 return dpMemo[numberOfItems, maxWeight] = Math.Max(
-                            (values[numberOfItems - 1] + knapSackRec(maxWeight - weights[numberOfItems - 1], weights, values, numberOfItems - 1, dpMemo)),
-                          knapSackRec(maxWeight, weights, values, numberOfItems - 1, dpMemo)
+                            (values[numberOfItems - 1] + knapSackRec_dp(maxWeight - weights[numberOfItems - 1], weights, values, numberOfItems - 1, dpMemo)),
+                          knapSackRec_dp(maxWeight, weights, values, numberOfItems - 1, dpMemo)
                      );
             }
 
@@ -90,7 +89,39 @@ namespace LeetCodeProblems.General
                 for (int j = 0; j < maxWeight + 1; j++)
                     dp[i, j] = -1;
 
-            return knapSackRec(maxWeight, weights, values, numberOfItems, dp);
+            return knapSackRec_dp(maxWeight, weights, values, numberOfItems, dp);
+        }
+
+        // Returns the maximum value that can be put in a knapsack of capacity W
+        //weight⇢
+        //item⇣/	0	1	2	3	4	5	6
+        //        0	0	0	0	0	0	0	0
+        //        1	0	10	10	10	10	10	10
+        //        2	0	10	15	25	25	25	25
+        //        3	0	10	15	40	50	55	65
+        static int knapSack_BottomUp(int maxWeight, int[] weights, int[] values, int numberOfItems)
+        {
+            int itemIndex, currentWeightMax;
+            int[,] knapsackTable = new int[numberOfItems + 1, maxWeight + 1];
+
+            // Build table K[][] in bottom-up manner
+            for (itemIndex = 0; itemIndex <= numberOfItems; itemIndex++)
+            {
+                for (currentWeightMax = 0; currentWeightMax <= maxWeight; currentWeightMax++)
+                {
+                    if (itemIndex == 0 || currentWeightMax == 0)
+                        knapsackTable[itemIndex, currentWeightMax] = 0;
+                    else if (weights[itemIndex - 1] <= currentWeightMax) //This item fits in the capacity so take the max of the two branch results)
+                        knapsackTable[itemIndex, currentWeightMax] = Math.Max(
+                                                            values[itemIndex - 1] + knapsackTable[itemIndex - 1, currentWeightMax - weights[itemIndex - 1]],
+                                                            knapsackTable[itemIndex - 1, currentWeightMax]
+                                                         );
+                    else //This item doesn't fit in the capacity so tabularize last item's weight
+                        knapsackTable[itemIndex, currentWeightMax] = knapsackTable[itemIndex - 1, currentWeightMax];
+                }
+            }
+
+            return knapsackTable[numberOfItems, maxWeight];
         }
 
         // Driver code
