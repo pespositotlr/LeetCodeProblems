@@ -27,7 +27,7 @@ namespace LeetCodeProblems.General
         //https://www.youtube.com/watch?v=cNWsgbKwwoU&t=1s
         //The key is hashed values use a modulus of the length of the hashmap
         //Collissions are avoided with "chaining" where indexes share multiple values (even if they had different keys) stored as linked lists
-        //You then kepe the key inside the node
+        //You then keep the key inside the node
         //The linked lists start with dummy nodes to function as the head and where it points changes
         //Time isn't necessarily O(1) due to the chaining but something close to that.
         //This doesn't ask for a "Resize" method which involves growing the hashmap
