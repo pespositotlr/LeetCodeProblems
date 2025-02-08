@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace LeetCodeProblems
+namespace LeetCodeProblems.General
 {
     /// <summary>
     /// https://leetcode.com/problems/combination-sum/
