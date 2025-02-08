@@ -10,7 +10,7 @@ using System.Xml.Linq;
 namespace LeetCodeProblems.ConceptualExamples
 {
     //https://leetcode.com/problems/longest-continuous-increasing-subsequence/solutions/746548/c-sliding-window-technique-simple-and-easy-with-explanation/
-    //The same pattern can be applied for most of the sliding WIndow Problems i.e continuous SubArray of string or number problems
+    //The same pattern can be applied for most of the sliding Window Problems i.e continuous SubArray of string or number problems
     public class SlidingWindow
     {
         public int FindLengthOfLCIS(int[] nums)
@@ -23,15 +23,15 @@ namespace LeetCodeProblems.ConceptualExamples
             int windowStart = 0;
             int currentLength = 0;
             int maxLength = 0;
-            for (windowEnd = 1; windowEnd < nums.Length; windowEnd++)
+            for (windowEnd = 1; windowEnd < nums.Length; windowEnd++) //Go through whole list of nums once
             {
-                if (nums[windowEnd - 1] >= nums[windowEnd])
+                if (nums[windowEnd - 1] >= nums[windowEnd]) //If last item is not smaller, then you're not in an increasing subsequence, so shift start of window forward
                 { //the key logic is when to change windowStart
                     windowStart = windowEnd;
                 }
 
                 currentLength = windowEnd - windowStart + 1;
-                maxLength = Math.Max(currentLength, maxLength);
+                maxLength = Math.Max(currentLength, maxLength); //Store th greatest length of increasing values
             }
 
             return maxLength;
@@ -75,10 +75,10 @@ namespace LeetCodeProblems.ConceptualExamples
             var currSum = getSum(arr, 0, 4);
             var largestSum = currSum;
 
-            for (var i = 1; i <= arr.Length - 5; i++)
+            for (var i = 1; i <= arr.Length - 5; i++) //Only goes to length - 5 because you don't need to keep going once only 4 indexes are left
             {
                 currSum -= arr[i - 1]; // subtract element to the left of curr window
-                currSum += arr[i + 4]; // add last element in curr window
+                currSum += arr[i + 4]; // add last element in curr window (This won't get an out-of-bounds error because we never go to more than 4 from the end)
                 largestSum = Math.Max(largestSum, currSum);
             }
 
