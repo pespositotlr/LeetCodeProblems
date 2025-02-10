@@ -22,7 +22,7 @@ namespace LeetCodeProblems.ConceptualExamples
         // Create a Mutex instance
         private static Mutex mutex = new Mutex();
 
-        static void Main()
+        static void MutexExampleMain()
         {
             for (int i = 0; i < 5; i++)
             {

@@ -433,7 +433,9 @@ namespace LeetCodeProblems
             //TwoCityScheduling.TwoCitySchedCost2(new int[][] { new int [] { 10, 20 }, new int[] { 30, 200 }, new int[] { 400, 50 }, new int[] { 30, 20 } });
             //NQueenProblem.MainNQueenProblem(new string[] { });
             //GenerateSubsets.GenerateSubsetsMain();
-            SubsetSumProblem.SubsetSumProblemMain();
+            //SubsetSumProblem.SubsetSumProblemMain();
+
+            EvenHandlerExample2Program.EvenHandlerExample2ProgramMain();
         }
 
     }

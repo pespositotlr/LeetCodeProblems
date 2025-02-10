@@ -111,7 +111,7 @@ namespace LeetCodeProblems.General
 
         }
 
-        static void Main(String[] args)
+        static void ParseBuySellMain(String[] args)
         {
             String input = Console.ReadLine();
 

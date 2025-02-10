@@ -50,7 +50,7 @@ namespace LeetCodeProblems.ConceptualExamples
             return Fibonacci(n - 1) + Fibonacci(n - 2);
         }
 
-        static void Main()
+        static void MemoizerProgramMain()
         {
             // Create the memoized version of the Fibonacci function
             var memoizedFibonacci = Memoizer.Memoize<int, int>(Fibonacci);
