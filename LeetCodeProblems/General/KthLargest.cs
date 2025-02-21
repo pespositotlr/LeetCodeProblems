@@ -5,7 +5,7 @@ using System.Text;
 
 namespace LeetCodeProblems.General
 {
-    internal class KthLargest
+    public class KthLargest
     {
         MinHeap minHeap;
         int k;
@@ -30,6 +30,33 @@ namespace LeetCodeProblems.General
             while (minHeap.Length > k)
                 minHeap.Pop(); //Pop smallest value
             return minHeap.Peek();
+        }
+
+        //Using C#'s build in PriorityQueue (Min Heap)
+        static int FindKthLargest(int[] nums, int k)
+        {
+            PriorityQueue<int, int> minHeap = new PriorityQueue<int, int>();
+
+            foreach (var num in nums)
+            {
+                minHeap.Enqueue(num, num);
+                if (minHeap.Count > k)
+                {
+                    minHeap.Dequeue(); //Removes item at lowest priority
+                }
+            }
+
+            return minHeap.Peek(); //Returns lowest priority element (kth)
+        }
+
+        //Time Complexity: O(n log k) (Loop through all nums and also prioritize k of them)
+        //Space Complexity: O(k)
+
+        static void Main()
+        {
+            int[] nums = { 3, 2, 1, 5, 6, 4 };
+            int k = 2;
+            Console.WriteLine(FindKthLargest(nums, k)); // Output: 5
         }
     }
 

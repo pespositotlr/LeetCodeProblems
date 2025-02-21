@@ -101,7 +101,7 @@ namespace LeetCodeProblems.General
         }
 
         //Get mininum of an array of length k
-        public Tuple<int, int> getMin(int[] items, int k)
+        public (int Item1, int Item2) getMin(int[] items, int k)
         {
             int min = items[0];
             int minIndex = 0;
@@ -115,7 +115,7 @@ namespace LeetCodeProblems.General
                 }
             }
 
-            return new Tuple<int, int>(min, minIndex);
+            return (min, minIndex);
         }
 
         public void Test1()
