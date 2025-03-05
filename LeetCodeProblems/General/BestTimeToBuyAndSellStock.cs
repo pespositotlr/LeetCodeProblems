@@ -30,6 +30,7 @@ namespace LeetCodeProblems.General
                 } else
                 {
                     //Move left pointer to new minimum (You don't just increment 1 because, this is a situation where price[l] >= price[r]
+                    //Your price has actually gone down at this point so you're shifting l to the "new low", it's impossible for the "old low" to be the better starting point
                     l = r;
                 }
 
