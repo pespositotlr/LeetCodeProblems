@@ -78,7 +78,9 @@ Mastercard Numbers either start with the numbers 51 through 55 or with the numbe
 //If first digit is (2) check next digits for Substring(1,3) convert to int is >= 221, <=720
 
 I didn't mention this in the interview but probably the best/most obvious way is to convert to string and then do stringNumber[13] and so on to get that char.
-
+After thinking about it the way I had it was good just I didn't need to do the boxing/unboxing steps it would've just truncated the decimal value. 
+But this was surely faster than converting to string and then de-converting the string to a 1 or 0 integer/long.
+The conventional way to convert to a long is (long)Convert.ToDouble("1100.25");
 */
 
 public class VcnTransactionValidator
@@ -87,13 +89,14 @@ public class VcnTransactionValidator
     {
         string vcnNumberString = vcnNumber.ToString();
         string transactionIdString = vcnNumber.ToString();
-        bool isMerchantBoundBool = Convert.ToBoolean(vcnNumberString[13]); //Alternative
-        long cardTypeVersin2 = (long)vcnNumberString[14];
+        bool isMerchantBoundBool = vcnNumberString[12] == '0' ? false : true ; //Alternative with added converting to string
+        long cardTypeVersin2 = (long)vcnNumberString[11];
 
         long isMerchantBound = vcnNumber % 2;
         long cardType = (long)(Math.Floor(Convert.ToDouble(vcnNumber) / 10) % 2);
         long isMultiUse = (long)(Math.Floor(Convert.ToDouble(vcnNumber) / 100) % 2);
         long isMultiUse2 = (long)((Convert.ToDouble(vcnNumber) / 100) % 2);
+        long isMultiUse3 = (vcnNumber / 100) % 2; //This just truncates the data, so no need for Math.Floor();
 
         long isOnlineTransaction = transactionId % 2;
         long isAuth = (long)(Math.Floor(Convert.ToDouble(transactionId) / 10) % 2); //The trick with this one is 0 is true
