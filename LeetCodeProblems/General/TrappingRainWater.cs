@@ -1,7 +1,10 @@
-﻿using System;
+﻿using Microsoft.Office.Interop.Excel;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
+using System.Reflection;
+using System.Runtime.Intrinsics.X86;
 using System.Text;
 
 namespace LeetCodeProblems
@@ -164,6 +167,58 @@ namespace LeetCodeProblems
 
             return result;
         }
+
+        //This is an optimal approach with O(n) time complexity and O(1) space complexity.
+        //Idea:
+        //Use two pointers(left and right) to track the leftmost and rightmost bars.
+        //Maintain two variables(leftMax and rightMax) to store the maximum height seen from the left and right.
+        //Move the pointer with the smaller height inward, calculating the trapped water.
+        static int TrapWater5(int[] height)
+        {
+            if (height == null || height.Length == 0) return 0;
+
+            int left = 0, right = height.Length - 1; //Two-pointer start from each sideand move to center
+            int leftMax = 0, rightMax = 0; //Start at height of 0
+            int waterTrapped = 0;
+
+            while (left < right)
+            {
+                if (height[left] < height[right]) //By drawing towards the center, you meet at the highest point
+                {
+                    if (height[left] >= leftMax)
+                        leftMax = height[left];  // Update left max (No new water trapped)
+                    else
+                        waterTrapped += leftMax - height[left];  // Water trapped at this index
+
+                    left++;  // Move left pointer
+                }
+                else
+                {
+                    if (height[right] >= rightMax)
+                        rightMax = height[right];  // Update right max
+                    else
+                        waterTrapped += rightMax - height[right];  // Water trapped at this index
+
+                    right--;  // Move right pointer
+                }
+            }
+
+            return waterTrapped;
+        }
+
+        //Explanation of Algorithm:
+        //Initialize two pointers: left = 0, right = n - 1.
+        //Track leftMax and rightMax to store the highest bars on each side.
+        //Move the pointer with the smaller height inward.
+        //If height[left] < height[right]:
+        //    If height[left] is greater than leftMax, update leftMax.
+        //    Else, add leftMax - height[left] to the total trapped water.
+        //    Move left pointer right.
+        //Otherwise:
+        //    If height[right] is greater than rightMax, update rightMax.
+        //    Else, add rightMax - height[right] to the total trapped water.
+        //    Move right pointer left.
+        //Repeat until left meets right.
 
     }
 }

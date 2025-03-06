@@ -52,7 +52,7 @@ namespace LeetCodeProblems.General
         //Time Complexity: O(n log k) (Loop through all nums and also prioritize k of them)
         //Space Complexity: O(k)
 
-        static void Main()
+        static void KthLargest_Main()
         {
             int[] nums = { 3, 2, 1, 5, 6, 4 };
             int k = 2;

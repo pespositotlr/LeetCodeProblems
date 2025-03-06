@@ -18,7 +18,7 @@ namespace LeetCodeProblems.ConceptualExamples
             Console.WriteLine($"Thread {id} proceeding...");
         }
 
-        static void Main()
+        static void ManualResetEventExample_Main()
         {
             for (int i = 1; i <= 3; i++)
             {
