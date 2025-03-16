@@ -81,6 +81,11 @@ I didn't mention this in the interview but probably the best/most obvious way is
 After thinking about it the way I had it was good just I didn't need to do the boxing/unboxing steps it would've just truncated the decimal value. 
 But this was surely faster than converting to string and then de-converting the string to a 1 or 0 integer/long.
 The conventional way to convert to a long is (long)Convert.ToDouble("1100.25");
+Another method would be to do: 
+(vcnNumber % 10) >= 1 ? 1 : 0
+(vcnNumber % 100) >= 10 ? 1 : 0
+(vcnNumber % 1000) >= 100 ? 1 : 0
+But this gets you the last digit, the last two digits, and last three digits respectively. But it's sort of the same thing as the truncation method.
 */
 
 public class VcnTransactionValidator
