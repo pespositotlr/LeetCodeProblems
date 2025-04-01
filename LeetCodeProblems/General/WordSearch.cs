@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 // Cognitiv problem
 // Word Search:
@@ -90,6 +91,8 @@ public class WordSearch
 
 
                 }
+
+                List<int> listOfNumbers = new List<int>() { 1, 2, 3, 4, 5 };
 
                 //Check backwards string from right to left
                 if (G[i][Gr] == S[Sr])
