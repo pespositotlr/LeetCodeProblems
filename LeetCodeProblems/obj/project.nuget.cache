@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Y+5w5hHbFDVC4PRdLHgHbZap5344Yl5sNuB2PjeTtHmRj/qoQToG/hkGx0G3svr3l3jLgIzYpb9B7+oOax4dyg==",
+  "dgSpecHash": "3YF1sVKb03M=",
   "success": true,
   "projectFilePath": "C:\\Users\\kewl0\\source\\repos\\LeetCodeProblems\\LeetCodeProblems\\LeetCodeProblems.csproj",
   "expectedPackageFiles": [
@@ -25,10 +25,48 @@
   ],
   "logs": [
     {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'Newtonsoft.Json' 12.0.3 has a known high severity vulnerability, https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
+      "projectPath": "C:\\Users\\kewl0\\source\\repos\\LeetCodeProblems\\LeetCodeProblems\\LeetCodeProblems.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\kewl0\\source\\repos\\LeetCodeProblems\\LeetCodeProblems\\LeetCodeProblems.csproj",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'RestSharp' 106.11.7 has a known high severity vulnerability, https://github.com/advisories/GHSA-9pq7-rcxv-47vq",
+      "projectPath": "C:\\Users\\kewl0\\source\\repos\\LeetCodeProblems\\LeetCodeProblems\\LeetCodeProblems.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\kewl0\\source\\repos\\LeetCodeProblems\\LeetCodeProblems\\LeetCodeProblems.csproj",
+      "libraryId": "RestSharp",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1904",
+      "level": "Warning",
+      "message": "Package 'System.Drawing.Common' 4.7.0 has a known critical severity vulnerability, https://github.com/advisories/GHSA-rxg9-xrhp-64gj",
+      "projectPath": "C:\\Users\\kewl0\\source\\repos\\LeetCodeProblems\\LeetCodeProblems\\LeetCodeProblems.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\kewl0\\source\\repos\\LeetCodeProblems\\LeetCodeProblems\\LeetCodeProblems.csproj",
+      "libraryId": "System.Drawing.Common",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
       "code": "NU1701",
       "level": "Warning",
-      "warningLevel": 1,
       "message": "Package 'Microsoft.Office.Interop.Excel 15.0.4795.1000' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "projectPath": "C:\\Users\\kewl0\\source\\repos\\LeetCodeProblems\\LeetCodeProblems\\LeetCodeProblems.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\kewl0\\source\\repos\\LeetCodeProblems\\LeetCodeProblems\\LeetCodeProblems.csproj",
       "libraryId": "Microsoft.Office.Interop.Excel",
       "targetGraphs": [
         "net7.0"
